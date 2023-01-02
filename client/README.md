@@ -1,5 +1,3 @@
-# Resume at 48:51 of https://www.youtube.com/watch?v=MJzbJQLGehs&t=1460s
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
