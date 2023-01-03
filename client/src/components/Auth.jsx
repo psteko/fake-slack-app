@@ -3,7 +3,7 @@ import Cookies from 'universal-cookie';
 import axios from 'axios';
 
 import signinImage from '../assets/home_splash.png';
-import signupImage from '../assets/sign_up.png';
+import signupImage from '../assets/sign_up.jpg';
 
 const initialState = {
     fullName: '',
@@ -119,8 +119,8 @@ const Auth = () => {
         </div>
         <div className="auth__form-container_image">
            {isSignup ? (
-            <img src={signinImage} alt="sign in" />) :
-            (<img src={signupImage} alt="sign up" />)
+            <img src={signupImage} alt="sign in" />) :
+            (<img src={signinImage} alt="sign up" />)
            }
         </div>
     </div>
