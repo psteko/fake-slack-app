@@ -7,7 +7,7 @@ import Cookies from 'universal-cookie';
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
 // import icons
 import SlackIcon from '../assets/slack.png';
-import LogoutIcon from '../assets/logout.png'
+import LogoutIcon from '../assets/logout.png';
 
 const SideBar = ()=>(
     <div className="channel-list__sidebar">
@@ -51,6 +51,22 @@ export const ChannelListContainer = () => {
                         <TeamChannelPreview
                         {...previewProps}
                         type="team"
+                        />
+                    )}
+                />
+                <ChannelList
+                    filters={{}}
+                    channelRenderFilterFn={()=>{}}
+                    List={(listProps) => (
+                        <TeamChannelList
+                        {...listProps}
+                        type="messaging"
+                        />
+                    )}
+                    Preview={(previewProps)=>(
+                        <TeamChannelPreview
+                        {...previewProps}
+                        type="messaging"
                         />
                     )}
                 />
