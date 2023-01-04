@@ -5,6 +5,8 @@ import axios from 'axios';
 import signinImage from '../assets/home_splash.png';
 import signupImage from '../assets/sign_up.jpg';
 
+const cookies = new Cookies();
+
 const initialState = {
     fullName: '',
     username: '',
@@ -22,11 +24,31 @@ const Auth = () => {
         setForm({ ...form, [e.target.name]: e.target.value});
         console.log(form);
     }
-
-    const handleSubmit = (e) => {
+    // when user click on submit button
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        //get form data from inputs
+        const {fullName, username, password, phoneNumber, avatarURL} = form;
+        const URL = 'http://localhost:5000/auth';
+        // send the data to the backend server (different URL depending on if it's sign in or sign up)
+        // get some data from the response (token, userId, hashedPassword)
+        const {data: {token, userId, hashedPassword }} = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`,{
+            username, password, fullName, phoneNumber, avatarURL,
+        })
+        // store data we got from backend and form into cookies
+        cookies.set('token', token);
+        cookies.set('username', username);
+        cookies.set('fullName', fullName);
+        cookies.set('userId', userId);
 
-        console.log(form);
+        if(isSignup){
+            cookies.set('phoneNumber', phoneNumber);
+            cookies.set('avatarURL', avatarURL);
+            cookies.set('hashedPassword', hashedPassword);
+        }
+        // reload window
+        // if user entered correct data, app should redirect to the chat UI
+        window.location.reload();
     }
 
     const switchMode = () => {

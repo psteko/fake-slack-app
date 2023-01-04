@@ -9,6 +9,7 @@
     padding: 0;
     height: 100%;
   }
+
   
   #root {
     height: 100%;
@@ -372,6 +373,10 @@
     left: initial;
     right: 100%;
     border-radius: var(--border-radius-md);
+  }
+
+  .str-chat__list {
+    background-color: white;
   }
   
   .channel-list__container {
@@ -1603,6 +1608,7 @@
     top: 62px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     height: auto;
+    border-left: 1px solid rgba(0,0,0,0.1);
   }
   
   .str-chat__thread-list .str-chat__message-team {
