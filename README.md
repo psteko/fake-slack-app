@@ -1,8 +1,7 @@
 # fake-slack-app
 
-Resume at 2:02:05 of https://www.youtube.com/watch?v=MJzbJQLGehs&t=1460s
+Resume at 2:49:32 of https://www.youtube.com/watch?v=MJzbJQLGehs&t=1460s
 
-Resume at 1:29:32 of https://www.youtube.com/watch?v=MJzbJQLGehs&t=1460s
 
  ## Frontend
  
