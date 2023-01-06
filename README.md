@@ -1,7 +1,6 @@
 # fake-slack-app
 
-Resume at 2:49:32 of https://www.youtube.com/watch?v=MJzbJQLGehs&t=1460s
-
+Built using: https://www.youtube.com/watch?v=MJzbJQLGehs&t=1460s
 
  ## Frontend
  
@@ -16,11 +15,12 @@ Resume at 2:49:32 of https://www.youtube.com/watch?v=MJzbJQLGehs&t=1460s
 
 
  ### Chat UI
-![Snimka zaslona (5)](https://user-images.githubusercontent.com/97118236/210827676-e2f46139-d0c6-4936-af02-7a2b3f479240.png)
+![Snimka zaslona (8)](https://user-images.githubusercontent.com/97118236/211027003-b9062d45-e166-447a-9af8-3267dfb052dc.png)
+
 
 Stream Chat: https://dashboard.getstream.io/app/1227323/chat/explorer
 
-Stream Chat is used to store data about users and their chat history
+Stream Chat is used to store data about users and their chat history as well as built-in Stream Chat components
 
  ## Backend
  
