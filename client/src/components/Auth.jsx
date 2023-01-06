@@ -11,7 +11,7 @@ const initialState = {
     fullName: '',
     username: '',
     password: '',
-    cofirmPassword: '',
+    confirmPassword: '',
     phoneNumber: '',
     avatarURL: '',
 }
@@ -28,12 +28,12 @@ const Auth = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         //get form data from inputs
-        const {fullName, username, password, phoneNumber, avatarURL} = form;
+        const { username, password, phoneNumber, avatarURL} = form;
         const URL = 'http://localhost:5000/auth';
         // send the data to the backend server (different URL depending on if it's sign in or sign up)
         // get some data from the response (token, userId, hashedPassword)
-        const {data: {token, userId, hashedPassword }} = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`,{
-            username, password, fullName, phoneNumber, avatarURL,
+        const {data: {token, userId, hashedPassword, fullName}} = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`,{
+            username, password, fullName: form.fullName, phoneNumber, avatarURL,
         })
         // store data we got from backend and form into cookies
         cookies.set('token', token);
