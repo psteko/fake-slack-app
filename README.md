@@ -1,7 +1,5 @@
 # fake-slack-app
 
-Built using: https://www.youtube.com/watch?v=MJzbJQLGehs&t=1460s
-
  ## Frontend
  
  - React JS
